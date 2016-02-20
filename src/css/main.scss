@@ -1,0 +1,309 @@
+$font-stack:    Verdana, sans-serif;
+$primary-color: #2cc2c2;
+$light-grey: #f5f5f5;
+$black: #444444;
+$white: #ffffff;
+
+body {
+    font-family: $font-stack;
+    font-size: 16px;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+}
+#home {
+    background-color: $black;
+    background-image: url('../images/marchhct.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    img.logo{
+        width:80%;
+        max-width:600px;
+        margin: 0 auto;
+    }
+
+    .intro-text {
+        /* Healing the body, mi: */
+        margin-top: 25px;
+        text-align: center;
+        font-family: AndaleMono;
+        font-size: 2.1em;
+        color: $white;
+        line-height: 50px;
+        text-shadow: 1px 1px 1px $black;
+    }
+}
+
+#about {
+    background-color: $light-grey;
+    padding-top: 80px;
+    .verse {
+        font-size: 1.8em;
+        color: $primary-color;
+        line-height: 32px;
+        margin:15px 0;
+    }
+    p{
+        margin: 15px auto;
+    }
+}
+
+#staff {
+    background-color: $light-grey;
+    padding-top: 10px;
+    .img-container img{
+        margin: 10px 30px;
+    }
+    .img-name-box {
+        font-family: deutschlander;
+        letter-spacing: 1px;
+        font-size: 1.7em;
+        display: inline-block;
+        width:160px;
+        cursor: pointer;
+    }
+    .selected-staff{
+        border-top:5px solid $primary-color;
+        border-bottom:5px solid $white;
+        border-bottom-color: $white;
+        background-color: $white;
+    }
+    .staff-info {
+        background-color:$white;
+        border-top:5px solid $primary-color;
+        margin-top:-5px;
+        padding: 50px 25px;
+    }
+}
+
+
+#services {
+    background-color: $white;
+    padding-top: 80px;
+}
+
+#contact {
+    background-color: $light-grey;
+    padding-top: 20px;
+    .verse {
+        font-size: 1.8em;
+        color: $primary-color;
+        line-height: 32px;
+        margin:15px 0;
+    }
+    p{
+        margin: 15px auto;
+    }
+    .map{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .send-email {
+        background-color: $primary-color;
+        color: $white;
+        &:hover{
+            background-color: lighten($primary-color, 10%);
+            color: $white;
+        }
+    }
+}
+
+#newpatients {
+    background-color: $white;
+    padding-top: 80px;
+    a {
+        font-size: 1em;
+        color: $black;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: underline;
+            color: $primary-color;
+        }
+    }
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background: $white !important;
+}
+
+h1 {
+    font-family: Copperplate;
+}
+h2, h3 {
+    font-family: Copperplate;
+    color: $primary-color;
+}
+
+
+/*===========  Bootstrap Over-ride ===========*/
+.navbar {
+    min-height:70px;
+    background: $primary-color;
+}
+
+.navbar-default {
+    border: none;
+    background: $primary-color;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar-toggle {
+    margin-top: 17px;
+}
+
+.navbar-default .navbar-toggle{
+    border: none;
+}
+
+.navbar-default.bottom .navbar-toggle {
+    .bottom .icon-bar {
+        background-color: $black;
+    }
+    &:hover, &:focus, &:active {
+        background-color: $white;
+        .icon-bar {
+            background-color: $primary-color;
+        }
+    }
+}
+
+.navbar-default.top .navbar-toggle {
+    .navbar-default.top .icon-bar {
+        background-color: $white;
+    }
+    &:hover, &:focus, &:active {
+        background-color: $primary-color;
+        .icon-bar {
+            background-color: $black;
+        }
+    }
+}
+
+.navbar-default .navbar-nav > li > a {
+    color:$white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    &.navbar-brand {
+        margin-top: 0px;
+    }
+}
+
+.top .navbar-nav > li > a {
+    color:$white !important;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    &:hover {
+        color:$black !important
+    }
+    &:active {
+        color:$black !important
+    }
+    &.navbar-brand {
+        margin-top: 0px;
+    }
+}
+
+.bottom .navbar-nav > li > a {
+    color:$black !important;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+
+.navbar-default .navbar-nav > li {
+    &:hover, &:active, &:focus, &visited {
+        background-color: $white !important;
+    }
+}
+
+.top .navbar-nav > li {
+    &:hover{
+        color: $black;
+    }
+    &:hover, &:active, &:focus, &visited {
+        background-color: $primary-color !important;
+    }
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar-brand {
+    padding: 7px 15px;
+    position: absolute;
+    bottom: 20px;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #contact {
+        .map{
+            margin-top: 20px;
+            width: 75%;
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #home .intro-text {
+        margin-top: 35px;
+        font-size: 1.5em;
+        line-height: 40px;
+    }
+    .top .navbar-nav > li > a, .bottom .navbar-nav > li > a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        &.navbar-brand {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    .navbar .navbar-nav {
+      float: none;
+    }
+    #contact {
+        .map{
+            margin-top: 20px;
+            width: 85%;
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

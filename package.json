@@ -1,0 +1,25 @@
+{
+  "name": "march",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hagan McPHail",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "*",
+    "browserify": "*",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-eslint": "*",
+    "gulp-open": "*",
+    "gulp-sass": "*",
+    "jquery": "*",
+    "lodash": "*",
+    "smoothscroll": "^0.2.2",
+    "vinyl-source-stream": "*"
+  }
+}
