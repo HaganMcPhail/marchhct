@@ -6,24 +6,33 @@ $white: #ffffff;
 
 body {
     font-family: $font-stack;
-    font-size: 16px;
+    font-size: 16px;background-color: $light-grey;
 }
 
 section {
     min-height: 100vh;
     width: 100%;
-    padding-top: 50px;
+}
+.over {
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width:100%;
+    min-height: 100vh;
+    background-color: rgba($primary-color, .95);
+    z-index: 999;
+    opacity: 1;
 }
 #home {
-    background-color: $black;
-    background-image: url('../images/marchhct.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-
+    position: relative;
+    background-image: url('../images/cross-opa-small.png');
+    background-repeat: repeat;
+    z-index: 1000;
     img.logo{
         width:80%;
         max-width:600px;
         margin: 0 auto;
+        margin-top: 100px;
     }
 
     .intro-text {
@@ -40,7 +49,8 @@ section {
 
 #about {
     background-color: $light-grey;
-    padding-top: 80px;
+    margin-top: 70px;
+    padding-top: 40px;
     .verse {
         font-size: 1.8em;
         color: $primary-color;
@@ -126,15 +136,9 @@ section {
     }
 }
 
-.bottom {
-    position: absolute;
-    width: 100%;
-    border-radius: 0px;
-    margin-bottom: 0px;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    background: $white !important;
+.down-btn {
+    margin-top: 50px;
+    width:55px;
 }
 
 h1 {
@@ -147,113 +151,100 @@ h2, h3 {
 
 
 /*===========  Bootstrap Over-ride ===========*/
-.navbar {
-    min-height:70px;
-    background: $primary-color;
+.slideIn{top:0px;}
+.navbar{
+    transition:all .25s ease-in-out
 }
-
 .navbar-default {
     border: none;
-    background: $primary-color;
-}
-
-.navbar .navbar-nav {
-  display: inline-block;
-  float: right;
-  vertical-align: top;
-}
-
-.navbar-collapse {
-  text-align: center;
-}
-
-.navbar-toggle {
-    margin-top: 17px;
-}
-
-.navbar-default .navbar-toggle{
-    border: none;
-}
-
-.navbar-default.bottom .navbar-toggle {
-    .bottom .icon-bar {
-        background-color: $black;
-    }
-    &:hover, &:focus, &:active {
-        background-color: $white;
-        .icon-bar {
-            background-color: $primary-color;
+    min-height:70px;
+    background: none;
+    .navbar-nav > li > a {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        &:hover, &:active {
+            color:$black;
+        }
+        &.navbar-brand {
+            margin-top: 0px;
         }
     }
-}
-
-.navbar-default.top .navbar-toggle {
-    .navbar-default.top .icon-bar {
+    &.home{
         background-color: $white;
+        .navbar-nav > li > a {
+            color:$primary-color;
+        }
+        .navbar-toggle {
+            background-color: transparent !important;
+            .icon-bar {
+                background-color: $primary-color;
+            }
+            &:hover, &:focus, &:active {
+                background-color: $white;
+                .icon-bar {
+                    background-color: $black;
+                }
+            }
+        }
     }
-    &:hover, &:focus, &:active {
+    &.not-home{
         background-color: $primary-color;
-        .icon-bar {
-            background-color: $black;
+        .navbar-nav > li > a {
+            color:$white;
+        }
+        .navbar-toggle {
+            background-color: transparent !important;
+            .icon-bar {
+                background-color: $white;
+            }
+            &:hover, &:focus, &:active {
+                background-color: $primary-color;
+                .icon-bar {
+                    background-color: $black;
+                }
+            }
         }
     }
-}
-
-.navbar-default .navbar-nav > li > a {
-    color:$white;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    &.navbar-brand {
-        margin-top: 0px;
+    .navbar-toggle{
+        border: none;
+        margin-top: 17px;
+    }
+    .navbar-nav {
+      display: inline-block;
+      float: right;
+      vertical-align: top;
+    }
+    .navbar-brand {
+        padding: 7px 15px;
+        position: absolute;
+        bottom: 20px;
     }
 }
 
-.top .navbar-nav > li > a {
-    color:$white !important;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    &:hover {
-        color:$black !important
-    }
-    &:active {
-        color:$black !important
-    }
-    &.navbar-brand {
-        margin-top: 0px;
-    }
-}
-
-.bottom .navbar-nav > li > a {
-    color:$black !important;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-
-.navbar-default .navbar-nav > li {
-    &:hover, &:active, &:focus, &visited {
-        background-color: $white !important;
-    }
-}
-
-.top .navbar-nav > li {
-    &:hover{
-        color: $black;
-    }
-    &:hover, &:active, &:focus, &visited {
-        background-color: $primary-color !important;
-    }
-}
-
-.navbar ul {
-    list-style-type: none;
-}
-
-.navbar-brand {
-    padding: 7px 15px;
-    position: absolute;
-    bottom: 20px;
-}
+// .navbar-default.home .navbar-toggle {
+//     .bottom .icon-bar {
+//         background-color: $black;
+//     }
+//     &:hover, &:focus, &:active {
+//         background-color: $white;
+//         .icon-bar {
+//             background-color: $primary-color;
+//         }
+//     }
+// }
+//
+// .navbar-default.home .navbar-toggle {
+//     .navbar-default.home .icon-bar {
+//         background-color: $white;
+//     }
+//     &:hover, &:focus, &:active {
+//         background-color: $primary-color;
+//         .icon-bar {
+//             background-color: $black;
+//         }
+//     }
+// }
+//
 
 /*==========  Non-Mobile First Method  ==========*/
 
@@ -279,7 +270,7 @@ h2, h3 {
         font-size: 1.5em;
         line-height: 40px;
     }
-    .top .navbar-nav > li > a, .bottom .navbar-nav > li > a {
+    .home .navbar-nav > li > a, .not-home .navbar-nav > li > a {
         padding-top: 5px;
         padding-bottom: 5px;
         &.navbar-brand {

@@ -5871,22 +5871,33 @@ button.close {
 
 body {
   font-family: Verdana, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #f5f5f5; }
 
 section {
   min-height: 100vh;
+  width: 100%; }
+
+.over {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
-  padding-top: 50px; }
+  min-height: 100vh;
+  background-color: rgba(44, 194, 194, 0.95);
+  z-index: 999;
+  opacity: 1; }
 
 #home {
-  background-color: #444444;
-  background-image: url("../images/marchhct.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  position: relative;
+  background-image: url("../images/cross-opa-small.png");
+  background-repeat: repeat;
+  z-index: 1000; }
   #home img.logo {
     width: 80%;
     max-width: 600px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 100px; }
   #home .intro-text {
     /* Healing the body, mi: */
     margin-top: 25px;
@@ -5899,7 +5910,8 @@ section {
 
 #about {
   background-color: #f5f5f5;
-  padding-top: 80px; }
+  margin-top: 70px;
+  padding-top: 40px; }
   #about .verse {
     font-size: 1.8em;
     color: #2cc2c2;
@@ -5966,15 +5978,9 @@ section {
       text-decoration: underline;
       color: #2cc2c2; }
 
-.bottom {
-  position: absolute;
-  width: 100%;
-  border-radius: 0px;
-  margin-bottom: 0px;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  background: #ffffff !important; }
+.down-btn {
+  margin-top: 50px;
+  width: 55px; }
 
 h1 {
   font-family: Copperplate; }
@@ -5984,83 +5990,58 @@ h2, h3 {
   color: #2cc2c2; }
 
 /*===========  Bootstrap Over-ride ===========*/
+.slideIn {
+  top: 0px; }
+
 .navbar {
-  min-height: 70px;
-  background: #2cc2c2; }
+  transition: all .25s ease-in-out; }
 
 .navbar-default {
   border: none;
-  background: #2cc2c2; }
-
-.navbar .navbar-nav {
-  display: inline-block;
-  float: right;
-  vertical-align: top; }
-
-.navbar-collapse {
-  text-align: center; }
-
-.navbar-toggle {
-  margin-top: 17px; }
-
-.navbar-default .navbar-toggle {
-  border: none; }
-
-.navbar-default.bottom .navbar-toggle .bottom .icon-bar {
-  background-color: #444444; }
-
-.navbar-default.bottom .navbar-toggle:hover, .navbar-default.bottom .navbar-toggle:focus, .navbar-default.bottom .navbar-toggle:active {
-  background-color: #ffffff; }
-  .navbar-default.bottom .navbar-toggle:hover .icon-bar, .navbar-default.bottom .navbar-toggle:focus .icon-bar, .navbar-default.bottom .navbar-toggle:active .icon-bar {
+  min-height: 70px;
+  background: none; }
+  .navbar-default .navbar-nav > li > a {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
+      color: #444444; }
+    .navbar-default .navbar-nav > li > a.navbar-brand {
+      margin-top: 0px; }
+  .navbar-default.home {
+    background-color: #ffffff; }
+    .navbar-default.home .navbar-nav > li > a {
+      color: #2cc2c2; }
+    .navbar-default.home .navbar-toggle {
+      background-color: transparent !important; }
+      .navbar-default.home .navbar-toggle .icon-bar {
+        background-color: #2cc2c2; }
+      .navbar-default.home .navbar-toggle:hover, .navbar-default.home .navbar-toggle:focus, .navbar-default.home .navbar-toggle:active {
+        background-color: #ffffff; }
+        .navbar-default.home .navbar-toggle:hover .icon-bar, .navbar-default.home .navbar-toggle:focus .icon-bar, .navbar-default.home .navbar-toggle:active .icon-bar {
+          background-color: #444444; }
+  .navbar-default.not-home {
     background-color: #2cc2c2; }
-
-.navbar-default.top .navbar-toggle .navbar-default.top .icon-bar {
-  background-color: #ffffff; }
-
-.navbar-default.top .navbar-toggle:hover, .navbar-default.top .navbar-toggle:focus, .navbar-default.top .navbar-toggle:active {
-  background-color: #2cc2c2; }
-  .navbar-default.top .navbar-toggle:hover .icon-bar, .navbar-default.top .navbar-toggle:focus .icon-bar, .navbar-default.top .navbar-toggle:active .icon-bar {
-    background-color: #444444; }
-
-.navbar-default .navbar-nav > li > a {
-  color: #ffffff;
-  padding-top: 25px;
-  padding-bottom: 25px; }
-  .navbar-default .navbar-nav > li > a.navbar-brand {
-    margin-top: 0px; }
-
-.top .navbar-nav > li > a {
-  color: #ffffff !important;
-  padding-top: 25px;
-  padding-bottom: 25px; }
-  .top .navbar-nav > li > a:hover {
-    color: #444444 !important; }
-  .top .navbar-nav > li > a:active {
-    color: #444444 !important; }
-  .top .navbar-nav > li > a.navbar-brand {
-    margin-top: 0px; }
-
-.bottom .navbar-nav > li > a {
-  color: #444444 !important;
-  padding-top: 25px;
-  padding-bottom: 25px; }
-
-.navbar-default .navbar-nav > li:hover, .navbar-default .navbar-nav > li:active, .navbar-default .navbar-nav > li:focus, .navbar-default .navbar-nav > livisited {
-  background-color: #ffffff !important; }
-
-.top .navbar-nav > li:hover {
-  color: #444444; }
-
-.top .navbar-nav > li:hover, .top .navbar-nav > li:active, .top .navbar-nav > li:focus, .top .navbar-nav > livisited {
-  background-color: #2cc2c2 !important; }
-
-.navbar ul {
-  list-style-type: none; }
-
-.navbar-brand {
-  padding: 7px 15px;
-  position: absolute;
-  bottom: 20px; }
+    .navbar-default.not-home .navbar-nav > li > a {
+      color: #ffffff; }
+    .navbar-default.not-home .navbar-toggle {
+      background-color: transparent !important; }
+      .navbar-default.not-home .navbar-toggle .icon-bar {
+        background-color: #ffffff; }
+      .navbar-default.not-home .navbar-toggle:hover, .navbar-default.not-home .navbar-toggle:focus, .navbar-default.not-home .navbar-toggle:active {
+        background-color: #2cc2c2; }
+        .navbar-default.not-home .navbar-toggle:hover .icon-bar, .navbar-default.not-home .navbar-toggle:focus .icon-bar, .navbar-default.not-home .navbar-toggle:active .icon-bar {
+          background-color: #444444; }
+  .navbar-default .navbar-toggle {
+    border: none;
+    margin-top: 17px; }
+  .navbar-default .navbar-nav {
+    display: inline-block;
+    float: right;
+    vertical-align: top; }
+  .navbar-default .navbar-brand {
+    padding: 7px 15px;
+    position: absolute;
+    bottom: 20px; }
 
 /*==========  Non-Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */
@@ -6076,10 +6057,10 @@ h2, h3 {
     margin-top: 35px;
     font-size: 1.5em;
     line-height: 40px; }
-  .top .navbar-nav > li > a, .bottom .navbar-nav > li > a {
+  .home .navbar-nav > li > a, .not-home .navbar-nav > li > a {
     padding-top: 5px;
     padding-bottom: 5px; }
-    .top .navbar-nav > li > a.navbar-brand, .bottom .navbar-nav > li > a.navbar-brand {
+    .home .navbar-nav > li > a.navbar-brand, .not-home .navbar-nav > li > a.navbar-brand {
       padding-top: 15px;
       padding-bottom: 15px; }
   .navbar .navbar-nav {
