@@ -118,7 +118,7 @@ return smoothScroll;
 },{}],2:[function(require,module,exports){
 var smoothScroll = require('smoothscroll');
 
-var exampleBtn = $('.navbar a');
+var exampleBtn = $('.navbar a, a.down');
 exampleBtn.click(function(){
     event.preventDefault();
     var scrollTo = event.currentTarget.id;
@@ -126,22 +126,25 @@ exampleBtn.click(function(){
     smoothScroll(exampleDestination);
 });
 
-jQuery(function($) {
-
+$(document).ready(function(){
     var $watch = $('#home')
     var $nav = $('.navbar-default');
     var $win = $(window);
     var winH = $win.height(); // Get the window height.
 
     $win.scroll(function () {
-        if ($win.scrollTop() > winH - 72) {
-            $nav.addClass("navbar-fixed-top top");
-            $nav.removeClass("nav-absolute-bottom bottom");
-            $('.navbar-brand img').attr("src", "../images/marchhct-logo-menu-white.png");
+        if ($win.scrollTop() > winH - 70) {
+            //not home
+            $nav.addClass("not-home");
+            $nav.removeClass("home");
+            // $('.navbar').removeClass('slideIn');
+            $('.navbar img').attr('src', "../images/marchhct-logo-menu-white.png");
         } else {
-            $nav.addClass("nav-absolute-bottom bottom");
-            $nav.removeClass("navbar-fixed-top top");
-            $('.navbar-brand img').attr("src", "../images/marchhct-logo-menu.png");
+            //home
+            $nav.addClass("home");
+            $nav.removeClass("not-home");
+            // $('.navbar').addClass('slideIn');
+            $('.navbar img').attr('src', "../images/marchhct-logo-menu.png");
         }
     }).on("resize", function(){ // If the user resizes the window
        winH = $win.height(); // you'll need the new height value
@@ -171,8 +174,6 @@ jQuery(function($) {
         $('.img-name-box').removeClass('selected-staff');
         $(this).addClass('selected-staff');
     });
-
-
 
 });
 
