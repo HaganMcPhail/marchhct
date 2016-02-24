@@ -31,8 +31,8 @@ section {
     img.logo{
         width:80%;
         max-width:600px;
-        margin: 0 auto;
-        margin-top: 100px;
+        margin: 75px auto;
+        margin-top: 145px;
     }
 
     .intro-text {
@@ -65,8 +65,9 @@ section {
 #staff {
     background-color: $light-grey;
     padding-top: 10px;
-    .img-container img{
+    img{
         margin: 10px 30px;
+        width: 100px;
     }
     .img-name-box {
         font-family: deutschlander;
@@ -75,17 +76,16 @@ section {
         display: inline-block;
         width:160px;
         cursor: pointer;
-    }
-    .selected-staff{
         border-top:5px solid $primary-color;
         border-bottom:5px solid $white;
         border-bottom-color: $white;
         background-color: $white;
+        height: 168px;
     }
     .staff-info {
         background-color:$white;
         border-top:5px solid $primary-color;
-        margin-top:-5px;
+        margin-top:-10px;
         padding: 50px 25px;
     }
 }
@@ -147,6 +147,19 @@ h1 {
 h2, h3 {
     font-family: Copperplate;
     color: $primary-color;
+}
+
+.unslider-arrow {
+    margin-top: 55px;
+    font-size: 50px;
+    color: #2cc2c2;
+    left:calc(50% - 150px);
+    &:hover, &:focus{
+        color:darken($primary-color, 10%);
+    }
+}
+.unslider-arrow.next{
+    right:calc(50% - 150px);
 }
 
 

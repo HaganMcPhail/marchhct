@@ -24,13 +24,24 @@ var config = {
 		bootstrap: [
 			'node_modules/bootstrap/dist/js/bootstrap.min.js'
 		],
+		unslider: './src/scripts/unslider-min.js',
 		images: './src/images/*',
 		css: [
       		'node_modules/bootstrap/dist/css/bootstrap.min.css',
       		'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
       		'node_modules/toastr/toastr.css',
+			'./src/css/unslider.css',
+			'./src/css/unslider-dots.css',
 			'./src/css/main.scss'
     	],
+		fonts: [
+			'node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot',
+			'node_modules/bootstrap/fonts/glyphicons-halflings-regular.svg',
+			'node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf',
+			'node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff',
+			'node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff2',
+			'node_modules/bootstrap/fonts/glyphicons-halflings-regular0.eot'
+		],
 		dist: './dist',
 		mainJs: './src/main.js'
 	}
@@ -81,6 +92,11 @@ gulp.task('smooth', function() {
 		.pipe(gulp.dest(config.paths.dist + '/scripts'))
 });
 
+gulp.task('unslider', function() {
+	gulp.src(config.paths.unslider)
+		.pipe(gulp.dest(config.paths.dist + '/scripts'))
+});
+
 gulp.task('css', function() {
 	gulp.src(config.paths.css)
 		.pipe(sass())
@@ -101,6 +117,16 @@ gulp.task('images', function () {
         .pipe(gulp.dest(config.paths.dist));
 });
 
+gulp.task('fonts', function () {
+    gulp.src(config.paths.fonts)
+        .pipe(gulp.dest(config.paths.dist + '/fonts'))
+        .pipe(connect.reload());
+
+    //publish favicon
+    gulp.src('./src/favicon.ico')
+        .pipe(gulp.dest(config.paths.dist));
+});
+
 gulp.task('lint', function() {
 	return gulp.src(config.paths.js)
 		.pipe(lint({config: 'eslint.config.json'}))
@@ -113,4 +139,4 @@ gulp.task('watch', function() {
 	gulp.watch(config.paths.css, ['css']);
 });
 
-gulp.task('default', ['html', 'js', 'jquery', 'bootstrap','smooth','css', 'images', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'jquery', 'bootstrap', 'fonts', 'smooth', 'unslider', 'css', 'images', 'lint', 'open', 'watch']);

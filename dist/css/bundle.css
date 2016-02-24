@@ -5869,6 +5869,86 @@ button.close {
 
 /*# sourceMappingURL=bootstrap-theme.min.css.map */
 
+.unslider {
+  overflow: auto;
+  margin: 0;
+  padding: 0; }
+
+.unslider-wrap {
+  position: relative; }
+
+.unslider-wrap.unslider-carousel > li {
+  float: left; }
+
+.unslider-vertical > ul {
+  height: 100%; }
+
+.unslider-vertical li {
+  float: none;
+  width: 100%; }
+
+.unslider-fade {
+  position: relative; }
+
+.unslider-fade .unslider-wrap li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 8; }
+
+.unslider-fade .unslider-wrap li.unslider-active {
+  z-index: 10; }
+
+.unslider li, .unslider ol, .unslider ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+.unslider-arrow {
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+  cursor: pointer; }
+
+.unslider-arrow.next {
+  left: auto;
+  right: 20px; }
+
+/**
+ *   Here's where everything gets included. You don't need
+ *   to change anything here, and doing so might break
+ *   stuff. Here be dragons and all that.
+ */
+/**
+ *   Default variables
+ *
+ *   While these can be set with JavaScript, it's probably
+ *   better and faster to just set them here, compile to
+ *   CSS and include that instead to use some of that
+ *   hardware-accelerated goodness.
+ */
+.unslider-nav ol {
+  list-style: none;
+  text-align: center; }
+
+.unslider-nav ol li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 2px solid #fff;
+  cursor: pointer; }
+
+.unslider-nav ol li.unslider-active {
+  background: #fff;
+  cursor: default; }
+
 body {
   font-family: Verdana, sans-serif;
   font-size: 16px;
@@ -5896,8 +5976,8 @@ section {
   #home img.logo {
     width: 80%;
     max-width: 600px;
-    margin: 0 auto;
-    margin-top: 100px; }
+    margin: 75px auto;
+    margin-top: 145px; }
   #home .intro-text {
     /* Healing the body, mi: */
     margin-top: 25px;
@@ -5923,24 +6003,25 @@ section {
 #staff {
   background-color: #f5f5f5;
   padding-top: 10px; }
-  #staff .img-container img {
-    margin: 10px 30px; }
+  #staff img {
+    margin: 10px 30px;
+    width: 100px; }
   #staff .img-name-box {
     font-family: deutschlander;
     letter-spacing: 1px;
     font-size: 1.7em;
     display: inline-block;
     width: 160px;
-    cursor: pointer; }
-  #staff .selected-staff {
+    cursor: pointer;
     border-top: 5px solid #2cc2c2;
     border-bottom: 5px solid #ffffff;
     border-bottom-color: #ffffff;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    height: 168px; }
   #staff .staff-info {
     background-color: #ffffff;
     border-top: 5px solid #2cc2c2;
-    margin-top: -5px;
+    margin-top: -10px;
     padding: 50px 25px; }
 
 #services {
@@ -5988,6 +6069,17 @@ h1 {
 h2, h3 {
   font-family: Copperplate;
   color: #2cc2c2; }
+
+.unslider-arrow {
+  margin-top: 55px;
+  font-size: 50px;
+  color: #2cc2c2;
+  left: calc(50% - 150px); }
+  .unslider-arrow:hover, .unslider-arrow:focus {
+    color: #239898; }
+
+.unslider-arrow.next {
+  right: calc(50% - 150px); }
 
 /*===========  Bootstrap Over-ride ===========*/
 .slideIn {

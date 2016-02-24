@@ -1,6 +1,6 @@
 var smoothScroll = require('smoothscroll');
 
-var exampleBtn = $('.navbar a, a.down');
+var exampleBtn = $('a.down');
 exampleBtn.click(function(){
     event.preventDefault();
     var scrollTo = event.currentTarget.id;
@@ -47,7 +47,6 @@ $(document).ready(function(){
     $('.img-name-box').first().addClass('selected-staff');
     $('.img-name-box').click(function(){
         var staffName = $(this).attr('staff');
-        var text;
         $.each( staff, function( key, value ) {
             if (key === staffName) {
                 $('.staff-text-area').html(value);
@@ -55,6 +54,40 @@ $(document).ready(function(){
         });
         $('.img-name-box').removeClass('selected-staff');
         $(this).addClass('selected-staff');
+    });
+
+    $('.acc-def').click(function(e) {
+        e.preventDefault();
+    });
+
+    $('.my-slider').unslider({
+        arrows: {
+        	//  Unslider default behaviour
+        	prev: '<a class="unslider-arrow prev"><span class="glyphicon glyphicon-chevron-left"></i></span>',
+        	next: '<a class="unslider-arrow next"><span class="glyphicon glyphicon-chevron-right"></i></span>'
+        },
+        infinite: true,
+        nav: false,
+        activeClass: 'unslider-active',
+        animation: 'horizontal'
+    }).on('unslider.change', function() {
+        var staffMember = $('.my-slider li.unslider-active .img-name-box');
+        staffMember.addClass('selected-staff');
+        var staffName = staffMember.attr('staff');
+        console.log(staffMember);
+        $.each( staff, function( key, value ) {
+            if (key === staffName) {
+                $('.staff-text-area').html(value);
+            }
+        });
+    });
+
+    $('a.unslider-arrow').click(function(){
+        $('a.unslider-arrow').hide(0, function(){
+            setTimeout(function(){
+                $('a.unslider-arrow').fadeIn();
+            }, 500);
+        });
     });
 
 });
