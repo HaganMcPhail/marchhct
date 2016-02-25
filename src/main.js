@@ -63,8 +63,8 @@ $(document).ready(function(){
     $('.my-slider').unslider({
         arrows: {
         	//  Unslider default behaviour
-        	prev: '<a class="unslider-arrow prev"><span class="glyphicon glyphicon-chevron-left"></i></span>',
-        	next: '<a class="unslider-arrow next"><span class="glyphicon glyphicon-chevron-right"></i></span>'
+        	prev: '<a class="unslider-arrow prev"><div class="img-name-box" staff="missy"><img src="../images/missy.png" alt="" /><br><i class="fa fa-arrow-left"></i></div></a>',
+        	next: '<a class="unslider-arrow next"><div class="img-name-box" staff="shannon"><img src="../images/shannon.png" alt="" /><br><i class="fa fa-arrow-right"></i></div></a>'
         },
         infinite: true,
         nav: false,
@@ -74,12 +74,21 @@ $(document).ready(function(){
         var staffMember = $('.my-slider li.unslider-active .img-name-box');
         staffMember.addClass('selected-staff');
         var staffName = staffMember.attr('staff');
-        console.log(staffMember);
+        var nextStaff = $('.my-slider li.unslider-active').next().children().attr('staff');
+        var prevStaff = $('.my-slider li.unslider-active').prev().children().attr('staff');
+        if (nextStaff === undefined) {
+            nextStaff = 'shannon'
+        } else if  (prevStaff === undefined) {
+            prevStaff = 'john'
+        }
+        //console.log(staffMember);
         $.each( staff, function( key, value ) {
             if (key === staffName) {
                 $('.staff-text-area').html(value);
             }
         });
+        $('a.prev').html('<div class="img-name-box" staff="missy"><img src="../images/'+prevStaff+'.png" alt="" /><br><i class="fa fa-arrow-left"></i></div>');
+        $('a.next').html('<div class="img-name-box" staff="missy"><img src="../images/'+nextStaff+'.png" alt="" /><br><i class="fa fa-arrow-right"></i></div>');
     });
 
     $('a.unslider-arrow').click(function(){

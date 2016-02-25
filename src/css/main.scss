@@ -11,6 +11,7 @@ body {
 
 section {
     min-height: 100vh;
+    padding: 40px 0px;
     width: 100%;
 }
 .over {
@@ -25,6 +26,7 @@ section {
 }
 #home {
     position: relative;
+    padding: 0px 0px;
     background-image: url('../images/cross-opa-small.png');
     background-repeat: repeat;
     z-index: 1000;
@@ -50,7 +52,7 @@ section {
 #about {
     background-color: $light-grey;
     margin-top: 70px;
-    padding-top: 40px;
+    padding: 40px 0px;
     .verse {
         font-size: 1.8em;
         color: $primary-color;
@@ -64,7 +66,7 @@ section {
 
 #staff {
     background-color: $light-grey;
-    padding-top: 10px;
+    padding: 40px 0px;
     img{
         margin: 10px 30px;
         width: 100px;
@@ -88,17 +90,18 @@ section {
         margin-top:-10px;
         padding: 50px 25px;
     }
+    .meet {
+        margin-bottom: -50px;
+    }
 }
 
 
 #services {
     background-color: $white;
-    padding-top: 80px;
 }
 
 #contact {
-    background-color: $light-grey;
-    padding-top: 20px;
+    background-color: $white;
     .verse {
         font-size: 1.8em;
         color: $primary-color;
@@ -120,11 +123,16 @@ section {
             color: $white;
         }
     }
+    .map-link {
+        color: $primary-color;
+        &:hover, &:visited, &:active {
+            color: darken($primary-color, 5%);
+        }
+    }
 }
 
 #newpatients {
-    background-color: $white;
-    padding-top: 80px;
+    background-color: $light-grey;
     a {
         font-size: 1em;
         color: $black;
@@ -133,6 +141,9 @@ section {
             text-decoration: underline;
             color: $primary-color;
         }
+    }
+    .therapy {
+        margin: 15px auto;
     }
 }
 
@@ -150,16 +161,30 @@ h2, h3 {
 }
 
 .unslider-arrow {
-    margin-top: 55px;
-    font-size: 50px;
-    color: #2cc2c2;
-    left:calc(50% - 150px);
+    text-align: center;
+    margin-top: 25px;
+    color: $primary-color;
+    left:calc(50% - 180px);
     &:hover, &:focus{
-        color:darken($primary-color, 10%);
+        color:darken($primary-color, 5%);;
+    }
+    img {
+        margin: 10px 0px !important;
+        width: 60px !important;
+        opacity: .75;
+    }
+    .img-name-box {
+        width: 100px !important;
+        background-color: transparent !important;
+        border: none !important;
+        height: 115px !important;
+    }
+    .fa {
+        font-size: 20px;
     }
 }
 .unslider-arrow.next{
-    right:calc(50% - 150px);
+    right:calc(50% - 180px);
 }
 
 
@@ -272,6 +297,11 @@ h2, h3 {
         .map{
             margin-top: 20px;
             width: 75%;
+        }
+    }
+    #staff {
+        .meet {
+            margin-bottom: 30px;
         }
     }
 }

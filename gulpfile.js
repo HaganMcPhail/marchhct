@@ -32,6 +32,7 @@ var config = {
       		'node_modules/toastr/toastr.css',
 			'./src/css/unslider.css',
 			'./src/css/unslider-dots.css',
+			'./src/css/font-awesome.min.css',
 			'./src/css/main.scss'
     	],
 		fonts: [
@@ -40,7 +41,8 @@ var config = {
 			'node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf',
 			'node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff',
 			'node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff2',
-			'node_modules/bootstrap/fonts/glyphicons-halflings-regular0.eot'
+			'node_modules/bootstrap/fonts/glyphicons-halflings-regular0.eot',
+			'./src/fonts/*'
 		],
 		dist: './dist',
 		mainJs: './src/main.js'
