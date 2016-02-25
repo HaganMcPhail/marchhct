@@ -7989,32 +7989,31 @@ section {
   padding: 40px 0px; }
   #staff img {
     margin: 10px 30px;
-    width: 100px; }
-  #staff .img-name-box {
-    font-family: deutschlander;
-    letter-spacing: 1px;
-    font-size: 1.7em;
-    display: inline-block;
-    width: 160px;
-    cursor: pointer;
-    border-top: 5px solid #2cc2c2;
-    border-bottom: 5px solid #ffffff;
-    border-bottom-color: #ffffff;
-    background-color: #ffffff;
-    height: 168px; }
-  #staff .staff-info {
-    background-color: #ffffff;
-    border-top: 5px solid #2cc2c2;
-    margin-top: -10px;
-    padding: 50px 25px; }
+    width: 120px;
+    margin-bottom: -10px; }
+  #staff .staff-profile {
+    padding-top: 10px;
+    text-align: center; }
   #staff .meet {
-    margin-bottom: -50px; }
+    margin-bottom: 25px; }
+  #staff .staff {
+    cursor: pointer; }
+    #staff .staff:nth-of-type(1), #staff .staff:nth-of-type(2), #staff .staff:nth-of-type(3) {
+      border-bottom: 1px solid #848484; }
+    #staff .staff:nth-of-type(1), #staff .staff:nth-of-type(2), #staff .staff:nth-of-type(4), #staff .staff:nth-of-type(5) {
+      border-right: 1px solid #848484; }
+    #staff .staff:hover {
+      background-color: #2cc2c2; }
+      #staff .staff:hover h2 {
+        color: #444444; }
+    #staff .staff:focus, #staff .staff:active {
+      background-color: #36d1d1; }
 
 #services {
   background-color: #ffffff; }
 
 #contact {
-  background-color: #ffffff; }
+  background-color: #f5f5f5; }
   #contact .verse {
     font-size: 1.8em;
     color: #2cc2c2;
@@ -8037,7 +8036,7 @@ section {
       color: #27adad; }
 
 #newpatients {
-  background-color: #f5f5f5; }
+  background-color: #ffffff; }
   #newpatients a {
     font-size: 1em;
     color: #444444;
@@ -8058,28 +8057,6 @@ h1 {
 h2, h3 {
   font-family: Copperplate;
   color: #2cc2c2; }
-
-.unslider-arrow {
-  text-align: center;
-  margin-top: 25px;
-  color: #2cc2c2;
-  left: calc(50% - 180px); }
-  .unslider-arrow:hover, .unslider-arrow:focus {
-    color: #27adad; }
-  .unslider-arrow img {
-    margin: 10px 0px !important;
-    width: 60px !important;
-    opacity: .75; }
-  .unslider-arrow .img-name-box {
-    width: 100px !important;
-    background-color: transparent !important;
-    border: none !important;
-    height: 115px !important; }
-  .unslider-arrow .fa {
-    font-size: 20px; }
-
-.unslider-arrow.next {
-  right: calc(50% - 180px); }
 
 /*===========  Bootstrap Over-ride ===========*/
 .slideIn {
@@ -8142,8 +8119,13 @@ h2, h3 {
   #contact .map {
     margin-top: 20px;
     width: 75%; }
-  #staff .meet {
-    margin-bottom: 30px; } }
+  #staff .staff:nth-of-type(1), #staff .staff:nth-of-type(3), #staff .staff:nth-of-type(5) {
+    border: none !important;
+    border-right: 1px solid #848484 !important; }
+  #staff .staff:nth-of-type(1), #staff .staff:nth-of-type(2), #staff .staff:nth-of-type(3), #staff .staff:nth-of-type(4) {
+    border-bottom: 1px solid #848484 !important; }
+  #staff .staff:nth-child(2), #staff .staff:nth-child(4) {
+    border-right: none !important; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -8161,7 +8143,12 @@ h2, h3 {
     float: none; }
   #contact .map {
     margin-top: 20px;
-    width: 85%; } }
+    width: 85%; }
+  #staff .staff:nth-of-type(1), #staff .staff:nth-of-type(2), #staff .staff:nth-of-type(3), #staff .staff:nth-of-type(4), #staff .staff:nth-of-type(5) {
+    border: none !important;
+    border-bottom: 1px solid #848484 !important; }
+  #staff .staff:nth-of-type(6) {
+    border: none !important; } }
 
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */

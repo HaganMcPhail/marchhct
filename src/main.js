@@ -60,43 +60,43 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
-    $('.my-slider').unslider({
-        arrows: {
-        	//  Unslider default behaviour
-        	prev: '<a class="unslider-arrow prev"><div class="img-name-box" staff="missy"><img src="../images/missy.png" alt="" /><br><i class="fa fa-arrow-left"></i></div></a>',
-        	next: '<a class="unslider-arrow next"><div class="img-name-box" staff="shannon"><img src="../images/shannon.png" alt="" /><br><i class="fa fa-arrow-right"></i></div></a>'
-        },
-        infinite: true,
-        nav: false,
-        activeClass: 'unslider-active',
-        animation: 'horizontal'
-    }).on('unslider.change', function() {
-        var staffMember = $('.my-slider li.unslider-active .img-name-box');
-        staffMember.addClass('selected-staff');
-        var staffName = staffMember.attr('staff');
-        var nextStaff = $('.my-slider li.unslider-active').next().children().attr('staff');
-        var prevStaff = $('.my-slider li.unslider-active').prev().children().attr('staff');
-        if (nextStaff === undefined) {
-            nextStaff = 'shannon'
-        } else if  (prevStaff === undefined) {
-            prevStaff = 'john'
-        }
-        //console.log(staffMember);
-        $.each( staff, function( key, value ) {
-            if (key === staffName) {
-                $('.staff-text-area').html(value);
-            }
-        });
-        $('a.prev').html('<div class="img-name-box" staff="missy"><img src="../images/'+prevStaff+'.png" alt="" /><br><i class="fa fa-arrow-left"></i></div>');
-        $('a.next').html('<div class="img-name-box" staff="missy"><img src="../images/'+nextStaff+'.png" alt="" /><br><i class="fa fa-arrow-right"></i></div>');
-    });
-
-    $('a.unslider-arrow').click(function(){
-        $('a.unslider-arrow').hide(0, function(){
-            setTimeout(function(){
-                $('a.unslider-arrow').fadeIn();
-            }, 500);
-        });
-    });
+    // $('.my-slider').unslider({
+    //     arrows: {
+    //     	//  Unslider default behaviour
+    //     	prev: '<a class="unslider-arrow prev"><div class="img-name-box" staff="missy"><img src="../images/missy.png" alt="" /><br><i class="fa fa-arrow-left"></i></div></a>',
+    //     	next: '<a class="unslider-arrow next"><div class="img-name-box" staff="shannon"><img src="../images/shannon.png" alt="" /><br><i class="fa fa-arrow-right"></i></div></a>'
+    //     },
+    //     infinite: true,
+    //     nav: false,
+    //     activeClass: 'unslider-active',
+    //     animation: 'horizontal'
+    // }).on('unslider.change', function() {
+    //     var staffMember = $('.my-slider li.unslider-active .img-name-box');
+    //     staffMember.addClass('selected-staff');
+    //     var staffName = staffMember.attr('staff');
+    //     var nextStaff = $('.my-slider li.unslider-active').next().children().attr('staff');
+    //     var prevStaff = $('.my-slider li.unslider-active').prev().children().attr('staff');
+    //     if (nextStaff === undefined) {
+    //         nextStaff = 'shannon'
+    //     } else if  (prevStaff === undefined) {
+    //         prevStaff = 'john'
+    //     }
+    //     //console.log(staffMember);
+    //     $.each( staff, function( key, value ) {
+    //         if (key === staffName) {
+    //             $('.staff-text-area').html(value);
+    //         }
+    //     });
+    //     $('a.prev').html('<div class="img-name-box" staff="missy"><img src="../images/'+prevStaff+'.png" alt="" /><br><i class="fa fa-arrow-left"></i></div>');
+    //     $('a.next').html('<div class="img-name-box" staff="missy"><img src="../images/'+nextStaff+'.png" alt="" /><br><i class="fa fa-arrow-right"></i></div>');
+    // });
+    //
+    // $('a.unslider-arrow').click(function(){
+    //     $('a.unslider-arrow').hide(0, function(){
+    //         setTimeout(function(){
+    //             $('a.unslider-arrow').fadeIn();
+    //         }, 500);
+    //     });
+    // });
 
 });
