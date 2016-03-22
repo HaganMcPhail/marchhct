@@ -7995,19 +7995,16 @@ section {
     padding-top: 10px;
     text-align: center; }
   #staff .meet {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    text-align: center; }
   #staff .staff {
     cursor: pointer; }
     #staff .staff:nth-of-type(1), #staff .staff:nth-of-type(2), #staff .staff:nth-of-type(3) {
       border-bottom: 1px solid #848484; }
     #staff .staff:nth-of-type(1), #staff .staff:nth-of-type(2), #staff .staff:nth-of-type(4), #staff .staff:nth-of-type(5) {
       border-right: 1px solid #848484; }
-    #staff .staff:hover {
-      background-color: #2cc2c2; }
-      #staff .staff:hover h2 {
-        color: #444444; }
-    #staff .staff:focus, #staff .staff:active {
-      background-color: #36d1d1; }
+    #staff .staff:hover h2 {
+      color: #444444; }
 
 #services {
   background-color: #ffffff; }
@@ -8151,4 +8148,8 @@ h2, h3 {
     border: none !important; } }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .meet {
+    text-align: center; } }
+
 /* Custom, iPhone Retina */
