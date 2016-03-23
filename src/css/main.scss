@@ -11,7 +11,7 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 40px 0px;
+    //padding: 40px 0px;
     width: 100%;
 }
 .over {
@@ -51,8 +51,6 @@ section {
 
 #about {
     background-color: $light-grey;
-    margin-top: 70px;
-    padding: 40px 0px;
     .verse {
         font-size: 1.8em;
         color: $primary-color;
@@ -66,7 +64,6 @@ section {
 
 #staff {
     background-color: $light-grey;
-    padding: 40px 0px;
     img{
         margin: 10px 30px;
         width: 120px;

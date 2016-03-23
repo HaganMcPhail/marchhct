@@ -24,12 +24,14 @@ var config = {
 		bootstrap: [
 			'node_modules/bootstrap/dist/js/bootstrap.min.js'
 		],
-		unslider: './src/scripts/unslider-min.js',
+		fullpage: 'node_modules/fullpage.js/jquery.fullPage.js',
+		slim: 'node_modules/fullpage.js/vendors/jquery.slimscroll.js',
 		images: './src/images/*',
 		css: [
       		'node_modules/bootstrap/dist/css/bootstrap.min.css',
       		'node_modules/bootstrap/dist/css/bootstrap-theme.min.css',
       		'node_modules/toastr/toastr.css',
+					'node_modules/fullpage.js/jquery.fullPage.css',
 			'./src/css/unslider.css',
 			'./src/css/unslider-dots.css',
 			'./src/css/font-awesome.min.css',
@@ -94,8 +96,13 @@ gulp.task('smooth', function() {
 		.pipe(gulp.dest(config.paths.dist + '/scripts'))
 });
 
-gulp.task('unslider', function() {
-	gulp.src(config.paths.unslider)
+gulp.task('fullpage', function() {
+	gulp.src(config.paths.fullpage)
+		.pipe(gulp.dest(config.paths.dist + '/scripts'))
+});
+
+gulp.task('slim', function() {
+	gulp.src(config.paths.slim)
 		.pipe(gulp.dest(config.paths.dist + '/scripts'))
 });
 
@@ -141,4 +148,4 @@ gulp.task('watch', function() {
 	gulp.watch(config.paths.css, ['css']);
 });
 
-gulp.task('default', ['html', 'js', 'jquery', 'bootstrap', 'fonts', 'smooth', 'unslider', 'css', 'images', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'jquery', 'bootstrap', 'fonts', 'slim', 'smooth', 'fullpage', 'css', 'images', 'lint', 'open', 'watch']);

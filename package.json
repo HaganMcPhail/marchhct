@@ -11,6 +11,7 @@
   "dependencies": {
     "bootstrap": "*",
     "browserify": "*",
+    "fullpage.js": "^2.7.8",
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-connect": "*",
