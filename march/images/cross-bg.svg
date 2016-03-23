@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="68px" height="90px" viewBox="0 0 68 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="68" height="90"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Background-Img" sketch:type="MSArtboardGroup" transform="translate(-14.000000, 0.000000)">
+            <g id="Group-2" sketch:type="MSLayerGroup" transform="translate(14.000000, 0.000000)">
+                <mask id="mask-2" sketch:name="Mask" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" opacity="0" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <g id="Group" mask="url(#mask-2)" font-weight="normal" font-family="Zapf Dingbats" line-spacing="161" sketch:type="MSTextLayer" font-size="69.8283738" sketch:alignment="middle">
+                    <g transform="translate(-14.000000, -8.000000)" id="✝">
+                        <text>
+                            <tspan x="0" y="57.8240343" fill="#FFFFFF">✝</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group" mask="url(#mask-2)" font-weight="normal" font-family="Zapf Dingbats" line-spacing="161" sketch:type="MSTextLayer" font-size="69.8283738" sketch:alignment="middle">
+                    <g transform="translate(3.000000, 32.000000)" id="✝">
+                        <text>
+                            <tspan x="0" y="57.8240343" fill="#FFFFFF">✝</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group" mask="url(#mask-2)" font-weight="normal" font-family="Zapf Dingbats" line-spacing="161" sketch:type="MSTextLayer" font-size="69.8283738" sketch:alignment="middle">
+                    <g transform="translate(-31.000000, 32.000000)" id="✝">
+                        <text>
+                            <tspan x="0" y="57.8240343" fill="#FFFFFF">✝</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group" mask="url(#mask-2)" font-weight="normal" font-family="Zapf Dingbats" line-spacing="161" sketch:type="MSTextLayer" font-size="69.8283738" sketch:alignment="middle">
+                    <g transform="translate(37.000000, 32.000000)" id="✝">
+                        <text>
+                            <tspan x="0" y="57.8240343" fill="#FFFFFF">✝</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group" mask="url(#mask-2)" font-weight="normal" font-family="Zapf Dingbats" line-spacing="161" sketch:type="MSTextLayer" font-size="69.8283738" sketch:alignment="middle">
+                    <g transform="translate(37.000000, 32.000000)" id="✝">
+                        <text>
+                            <tspan x="0" y="57.8240343" fill="#FFFFFF">✝</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group" mask="url(#mask-2)" font-weight="normal" font-family="Zapf Dingbats" line-spacing="161" sketch:type="MSTextLayer" font-size="69.8283738" sketch:alignment="middle">
+                    <g transform="translate(20.000000, -8.000000)" id="✝">
+                        <text>
+                            <tspan x="0" y="57.8240343" fill="#FFFFFF">✝</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="Group" mask="url(#mask-2)" font-weight="normal" font-family="Zapf Dingbats" line-spacing="161" sketch:type="MSTextLayer" font-size="69.8283738" sketch:alignment="middle">
+                    <g transform="translate(54.000000, -8.000000)" id="✝">
+                        <text>
+                            <tspan x="0" y="57.8240343" fill="#FFFFFF">✝</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
